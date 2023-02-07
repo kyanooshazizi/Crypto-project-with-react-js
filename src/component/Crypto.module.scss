@@ -1,0 +1,64 @@
+
+@mixin wrape{
+    margin: 0px 350px;
+    display: flex;
+    align-items: center;
+    background-color: #efefef;
+    border-bottom:2px solid #ffffff;
+    padding: 20px;
+   
+}
+.wrapper_cart{
+   @include wrape;
+   span{
+    flex-basis:18%;
+    text-align: left;
+   }
+   .Cgreen{
+    color: green;
+    font-size: bold;
+}
+.Cred{
+    color: red;
+    font-size: bold;
+}
+   img{
+    padding-right:20px;
+    width: 40px;
+
+   }
+}
+.Header{
+    @include wrape;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    h3{
+        flex-basis:15%;
+        text-align: left;
+        padding-right: 20px;
+        font-size: 16px;
+       }
+    h3:nth-child(2),h3:nth-child(3){
+        padding-left: 40px;
+    }  
+}
+ 
+.Search{
+    margin: 10px auto;
+    display: block;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    width: 300px;
+    background-color: #f9f7f7;
+    outline: 2px solid rgba(70, 70, 255, 0.411);
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+.loading{
+@extend .Search;
+background-color: transparent;
+outline:none;
+margin-top: 150px;
+width: 200px;
+}
